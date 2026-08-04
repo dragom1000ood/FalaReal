@@ -13,7 +13,25 @@
 <meta property="og:image" content="/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://falareal-site-16.vercel.app">
+<meta property="og:url" content="https://falareal-site-18.vercel.app">
+<link rel="canonical" href="https://falareal-site-18.vercel.app">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Fala Real",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web",
+  "description": "Pratique alemão e inglês de verdade — sotaque, ruído de fundo e interrupções, como realmente acontece no dia a dia.",
+  "url": "https://falareal-site-18.vercel.app",
+  "inLanguage": ["pt-BR", "de", "en"],
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/PreOrder"
+  }
+}
+</script>
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -23,6 +41,7 @@
 
 <link rel="icon" type="image/png" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/favicon.png">
+<meta name="theme-color" content="#12181f">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -500,6 +519,16 @@
     display:none; margin-top:20px; padding:16px 20px; border:1px solid var(--teal);
     background:rgba(62,107,99,0.15); border-radius:12px; font-size:0.95rem;
   }
+  .thanks p{margin:0;}
+
+  .referral-box{margin-top:18px; padding-top:16px; border-top:1px dashed rgba(244,239,230,0.2);}
+  .referral-title{font-family:var(--display); font-weight:600; font-size:1.05rem; margin-bottom:6px;}
+  .referral-desc{color:rgba(244,239,230,0.65); font-size:0.88rem; margin-bottom:14px;}
+  .referral-link-row{display:flex; gap:8px; margin-bottom:12px;}
+  .referral-input{
+    flex:1; min-width:0; background:var(--ink); border:1px solid var(--line); color:rgba(244,239,230,0.8);
+    padding:10px 14px; border-radius:10px; font-family:var(--mono); font-size:0.78rem;
+  }
 
   footer{padding:40px 0; border-top:1px solid var(--line);}
   footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
@@ -554,7 +583,7 @@
         </div>
         <div class="lang-en">
           <span class="eyebrow">Prática de conversação em inglês</span>
-          <h1>O inglês que te preparam pra prova. <em>Não o que te deixa se envolver de verdade.</em></h1>
+          <h1>O inglês que te preparam pra prova. <em>Not what shows you the reality, but what gives you the truth.</em></h1>
           <p class="sub">A maioria dos apps te ensina um inglês de laboratório — devagar, claro, sem interrupção. A vida real não é assim. Aqui você treina inglês de verdade: pra se envolver de verdade — no trabalho, viajando, ou vivendo fora — com sotaque, ruído e gente te cortando no meio da frase.</p>
         </div>
         <div class="hero-actions">
@@ -971,10 +1000,22 @@
         <input type="email" name="email" required placeholder="seu@email.com" aria-label="Seu e-mail">
         <input type="hidden" name="desafio" id="quiz-desafio-de">
         <input type="hidden" name="nivel_percebido" id="quiz-nivel-de">
+        <input type="hidden" name="indicado_por" id="ref-de">
         <button type="submit" class="btn-primary">Quero entrar na lista</button>
       </form>
       <p class="form-note">sem spam — só um e-mail quando abrir sua vaga</p>
-      <div class="thanks" id="thanks-msg-de">Prontinho! Assim que abrir uma vaga, você é uma das primeiras pessoas a saber.</div>
+      <div class="thanks" id="thanks-msg-de">
+        <p>Prontinho! Assim que abrir uma vaga, você é uma das primeiras pessoas a saber.</p>
+        <div class="referral-box">
+          <p class="referral-title">🚀 Quer subir na fila? Convide amigos.</p>
+          <p class="referral-desc">Quem entrar pelo seu link — e você — sobem juntos pra acesso prioritário.</p>
+          <div class="referral-link-row">
+            <input type="text" readonly id="referral-link-de" class="referral-input">
+            <button class="btn-audio" id="copy-referral-de">📋 Copiar</button>
+          </div>
+          <button class="btn-share" id="whatsapp-referral-de">📲 Convidar no WhatsApp</button>
+        </div>
+      </div>
     </div>
 
     <div class="cta-inner lang-en" data-reveal>
@@ -986,17 +1027,29 @@
         <input type="email" name="email" required placeholder="seu@email.com" aria-label="Seu e-mail">
         <input type="hidden" name="desafio" id="quiz-desafio-en">
         <input type="hidden" name="nivel_percebido" id="quiz-nivel-en">
+        <input type="hidden" name="indicado_por" id="ref-en">
         <button type="submit" class="btn-primary">Quero entrar na lista</button>
       </form>
       <p class="form-note">sem spam — só um e-mail quando abrir sua vaga</p>
-      <div class="thanks" id="thanks-msg-en">Prontinho! Assim que abrir uma vaga, você é uma das primeiras pessoas a saber.</div>
+      <div class="thanks" id="thanks-msg-en">
+        <p>Prontinho! Assim que abrir uma vaga, você é uma das primeiras pessoas a saber.</p>
+        <div class="referral-box">
+          <p class="referral-title">🚀 Quer subir na fila? Convide amigos.</p>
+          <p class="referral-desc">Quem entrar pelo seu link — e você — sobem juntos pra acesso prioritário.</p>
+          <div class="referral-link-row">
+            <input type="text" readonly id="referral-link-en" class="referral-input">
+            <button class="btn-audio" id="copy-referral-en">📋 Copiar</button>
+          </div>
+          <button class="btn-share" id="whatsapp-referral-en">📲 Convidar no WhatsApp</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="logo">fala<span>real</span> <span class="version-tag">v10.1.5</span></div>
+    <div class="logo">fala<span>real</span> <span class="version-tag">v11.1.0</span></div>
     <p class="lang-de">Feito por um brazuca que já viveu mais de 6 anos na Alemanha.</p>
     <p class="lang-en">feito pra quem já cansou do inglês de laboratório</p>
   </div>
@@ -1056,6 +1109,10 @@
       langButtons.forEach(b=>b.classList.toggle('active', b === btn));
       if(typeof stopAllAudio === 'function') stopAllAudio();
       renderLevel(currentLevel);
+      if(typeof loadStreak === 'function'){
+        streakData = loadStreak(currentLang);
+        if(typeof renderStreak === 'function') renderStreak();
+      }
     });
   });
 
@@ -1395,22 +1452,22 @@
   renderLevel(currentLevel);
   animateMini();
 
-  // ---- SEQUÊNCIA DIÁRIA ----
-  const STORAGE_KEY = 'falareal_streak_v1';
+  // ---- SEQUÊNCIA DIÁRIA (separada por idioma — alemão e inglês são hábitos independentes) ----
+  const STREAK_KEYS = { de: 'falareal_streak_de_v1', en: 'falareal_streak_en_v1' };
   function todayStr(){ return new Date().toISOString().slice(0,10); }
   function daysBetween(a,b){ return Math.round((new Date(b) - new Date(a)) / 86400000); }
 
-  function loadStreak(){
+  function loadStreak(lang){
     try{
-      const raw = localStorage.getItem(STORAGE_KEY);
+      const raw = localStorage.getItem(STREAK_KEYS[lang]);
       return raw ? JSON.parse(raw) : {streak:0, xp:0, lastDate:null};
     }catch(e){ return {streak:0, xp:0, lastDate:null}; }
   }
-  function saveStreak(data){
-    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); }catch(e){}
+  function saveStreak(lang, data){
+    try{ localStorage.setItem(STREAK_KEYS[lang], JSON.stringify(data)); }catch(e){}
   }
 
-  let streakData = loadStreak();
+  let streakData = loadStreak(currentLang);
 
   const streakNumEl = document.getElementById('streak-num');
   const streakDotsEl = document.getElementById('streak-dots');
@@ -1466,7 +1523,7 @@
     }
     streakData.lastDate = today;
     streakData.xp += 10;
-    saveStreak(streakData);
+    saveStreak(currentLang, streakData);
     renderStreak();
 
     const hit = milestones.find(m => m.days === streakData.streak);
@@ -1594,7 +1651,7 @@
     const text = currentLang === 'de'
       ? `🔥 ${streakData.streak} Tage in Folge echtes Deutsch geübt! ${site}`
       : `🔥 Bati ${streakData.streak} dias seguidos treinando alemão de verdade! ${site}`;
-    window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+    window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
   });
 
   updateShareVisibility();
@@ -1670,6 +1727,76 @@
       finishQuiz();
     });
   });
+
+  // ---- Sistema de indicação ----
+  function getOrCreateMyCode(){
+    try{
+      let code = localStorage.getItem('falareal_ref_code');
+      if(!code){
+        code = Math.random().toString(36).slice(2, 8).toUpperCase();
+        localStorage.setItem('falareal_ref_code', code);
+      }
+      return code;
+    }catch(e){
+      return Math.random().toString(36).slice(2, 8).toUpperCase();
+    }
+  }
+
+  function getReferrerFromUrl(){
+    const params = new URLSearchParams(window.location.search);
+    return params.get('ref');
+  }
+
+  const myRefCode = getOrCreateMyCode();
+  const referredBy = getReferrerFromUrl();
+  if(referredBy){
+    try{ localStorage.setItem('falareal_referred_by', referredBy); }catch(e){}
+  }
+
+  // guarda quem indicou (se veio de um link) nos campos ocultos dos formulários
+  const storedReferrer = referredBy || (function(){ try{ return localStorage.getItem('falareal_referred_by'); }catch(e){ return null; } })();
+  if(storedReferrer){
+    const refDe = document.getElementById('ref-de');
+    const refEn = document.getElementById('ref-en');
+    if(refDe) refDe.value = storedReferrer;
+    if(refEn) refEn.value = storedReferrer;
+  }
+
+  // monta o link pessoal de cada um, sem o parâmetro ref antigo (se houver)
+  const baseUrl = window.location.origin + window.location.pathname;
+  const myReferralLink = `${baseUrl}?ref=${myRefCode}`;
+
+  const referralLinkDe = document.getElementById('referral-link-de');
+  const referralLinkEn = document.getElementById('referral-link-en');
+  if(referralLinkDe) referralLinkDe.value = myReferralLink;
+  if(referralLinkEn) referralLinkEn.value = myReferralLink;
+
+  function copyReferralLink(){
+    navigator.clipboard.writeText(myReferralLink).catch(()=>{});
+  }
+  const copyDeBtn = document.getElementById('copy-referral-de');
+  const copyEnBtn = document.getElementById('copy-referral-en');
+  if(copyDeBtn) copyDeBtn.addEventListener('click', ()=>{
+    copyReferralLink();
+    copyDeBtn.textContent = '✓ Copiado';
+    setTimeout(()=> copyDeBtn.textContent = '📋 Copiar', 1800);
+  });
+  if(copyEnBtn) copyEnBtn.addEventListener('click', ()=>{
+    copyReferralLink();
+    copyEnBtn.textContent = '✓ Copiado';
+    setTimeout(()=> copyEnBtn.textContent = '📋 Copiar', 1800);
+  });
+
+  function shareReferralWhatsapp(lang){
+    const text = lang === 'de'
+      ? `Tô treinando alemão de verdade no Fala Real — sotaque, ruído, tudo real. Entra pelo meu link que a gente sobe junto na fila: ${myReferralLink}`
+      : `I'm practicing real German/English on Fala Real — real accents, real noise. Join through my link so we move up the list together: ${myReferralLink}`;
+    window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
+  }
+  const whatsappRefDe = document.getElementById('whatsapp-referral-de');
+  const whatsappRefEn = document.getElementById('whatsapp-referral-en');
+  if(whatsappRefDe) whatsappRefDe.addEventListener('click', ()=> shareReferralWhatsapp('de'));
+  if(whatsappRefEn) whatsappRefEn.addEventListener('click', ()=> shareReferralWhatsapp('en'));
 
   // Waitlist forms — envia de verdade pro Formspree, mantendo a experiência inline
   const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xeeywzdd';
